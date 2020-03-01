@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All reactions of Yammer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="yammerServices">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="logo-yahoo" color="primary" slot="start"></ion-icon>
+        <ion-button (click)="connectToYammer()" fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>      
+      <ion-card-subtitle>Reaction of Yammer's Service</ion-card-subtitle>
+      <ion-card-title>YAMMER</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+  <ion-card>
+    <div class="publishPost">
+    <ion-item>
+    <button (click)="publishPostYammer()" item-right clear>
+      <ion-icon name="create" slot="start"></ion-icon>
+    </button>
+      <ion-label>Publish a message in a group.</ion-label>
+    </ion-item>
+  </div>
+  
+  </ion-card>
+  <div class="backTwitter">
+    <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
+  </div>
+</ion-content>

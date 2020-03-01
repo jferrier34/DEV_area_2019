@@ -1,0 +1,53 @@
+<button data-toggle="modal" [attr.data-target]="'#' + uniqueAction" type="button"
+  class="btn btn-rounded waves-effect"><i class="fas fa-cogs pr-2" aria-hidden="true"></i>THIS</button>
+
+<div class="modal fade" [id]="uniqueAction" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter Action</h5>
+        <button #close type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-3 ActionList">
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 1">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
+              <p>GitHub</p>
+            </button>
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 2">
+              <img src="https://cdn.dribbble.com/users/915711/screenshots/5827243/weather_icon3.png" />
+              <p>Température</p>
+            </button>
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 4">
+              <img src="https://cdn.dribbble.com/users/915711/screenshots/5827243/weather_icon3.png" />
+              <p>Pluie</p>
+            </button>
+          </div>
+          <div class="col-md-3 ActionList">
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 3">
+              <img src="https://image.flaticon.com/icons/png/512/65/65714.png" />
+              <p>Currency - En dessous</p>
+            </button>
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 5">
+              <img src="https://image.flaticon.com/icons/png/512/65/65714.png" />
+              <p>Currency - Au dessus</p>
+            </button>
+
+          </div>
+          <div class="col-md-6">
+            <div *ngIf="select == 1"><app-github-services (Valid)="valid($event)"></app-github-services></div>
+            <div *ngIf="select == 2"><app-weather-services type=1 (Valid)="valid($event)"></app-weather-services></div>
+            <div *ngIf="select == 4"><app-weather-services type=2 (Valid)="valid($event)"></app-weather-services></div>
+            <div *ngIf="select == 3"><app-timer-services type=1 (Valid)="valid($event)"></app-timer-services></div>
+            <div *ngIf="select == 5"><app-timer-services type=2 (Valid)="valid($event)"></app-timer-services></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

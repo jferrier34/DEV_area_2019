@@ -1,0 +1,31 @@
+<div class="content">
+
+
+  <div class="facebookService">
+    <div class="card" style="width: 100%; padding: 10px;">
+      <img class="card-img-top" [src]="img" alt="Card image cap">
+      <div class="connectAllFacebookService">
+        <span *ngIf="connected===true">{{user.firstName}} {{user.lastName}}</span>
+        <button *ngIf="connected ===false" (click)="signInWithFB()" class="btn btn-primary">Use all Facebook's reactions</button>
+        <button *ngIf="connected ===true" (click)="signOut()" class="btn btn-primary">Disconnect</button>
+      </div>
+      <div class="hr">
+        <hr>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Facebook's services.</h4>
+        <p class="card-text">This section is reserved and constraints by an reactions services.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 100%; padding: 10px;">
+      <div class="card-header">
+        Services
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Publish an statut on your account.</li>
+        <li class="list-group-item">Publish a picture on your account.</li>
+      </ul>
+    </div>
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+.card {
+    margin-top: 3rem;
+}
+
+.githubService img {
+    width: 56px;
+    height: 50px;
+
+    margin-left: 0.5em;
+}
+
+.weatherService img {
+    width: 46px;
+    height: 40px;
+
+    margin-left: 1em;
+}
+
+.timerService img {
+    width: 56px;
+    height: 50px;
+
+    margin-left: 1em;
+}

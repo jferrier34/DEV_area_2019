@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Weather in the city</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="seeWhatIsTheweather">
+    <form>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Weather</ion-card-subtitle>
+          <ion-card-title>Cette action se déclenche lorsque la température passe en dessous de 15°C.</ion-card-title>
+        </ion-card-header>
+        <ion-button color="primary" (click)="validWeather()">Submit</ion-button>
+        <ion-button color="danger" (click)="backToServices()">Back</ion-button>
+        <br>
+        <br>
+      </ion-card>
+    </form>
+  </div>
+  </ion-content>
+

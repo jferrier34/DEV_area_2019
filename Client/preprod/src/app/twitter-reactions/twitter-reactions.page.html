@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All reactions of Twitter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="twitterServices">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="logo-twitter" color="primary" slot="start"></ion-icon>
+        <ion-button (click)="connectToTwitter()" fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>      
+      <ion-card-subtitle>Reaction of Twitter's Service</ion-card-subtitle>
+      <ion-card-title>TWITTER</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+  <ion-card>
+    <div class="publishPost">
+    <ion-item>
+    <button (click)="publishPostTwitter()" item-right clear (click)="got">
+      <ion-icon name="create" slot="start"></ion-icon>
+    </button>
+      <ion-label>Publish an statut on your account.</ion-label>
+    </ion-item>
+  </div>
+
+  
+  <div class="publishPicture">
+    <ion-item>
+      <button item-right clear (click)="publishPictureTwitter()">
+      <ion-icon name="images" slot="start"></ion-icon>
+    </button>
+      <ion-label>Publish a picture on your account.</ion-label>
+    </ion-item>
+  </div>
+  </ion-card>
+  <div class="backTwitter">
+    <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
+  </div>
+
+  
+</ion-content>

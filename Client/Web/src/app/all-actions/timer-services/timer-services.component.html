@@ -1,0 +1,37 @@
+<div class="content">
+  <div class="githubService">
+    <div class="card" style="width: 100%; padding: 10px;">
+      <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/65/65714.png" alt="Card image cap">
+      <div class="connectAllFacebookService">
+
+      </div>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Action et monnaie services.</h4>
+      <p class="card-text">{{text}}.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 100%; padding: 5px;">
+    <div class="card-header">
+      Paramètres
+    </div>
+    <label for="club-select">Choisissez une paire de monnaies disponible :</label>
+    <div class="row">
+      <div class="col-md-6">
+        <select (change)='onValueChange()' [(ngModel)]="curr1" class="form-control" id="club-select">
+          <option *ngFor="let item of currDispo" value="{{item.id}}">{{item.id}} - {{item.currencyName}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <select (change)='onValueChange()' [(ngModel)]="curr2" class="form-control" id="club-select">
+          <option *ngFor="let item of currDispo" value="{{item.id}}">{{item.id}} - {{item.currencyName}}</option>
+        </select>
+      </div>
+
+      <p style="padding: 10px;">Valeur actuel de l'échange: {{actual}}</p>
+      <input style="margin: 10px;" placeholder="Valeur de référence ..." class="form-control" id="expe" type="text" [(ngModel)]="value">
+    </div>
+  </div>
+  <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+
+</div>

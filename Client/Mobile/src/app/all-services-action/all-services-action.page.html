@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All services action</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="allServices">
+    <div class="facebookService">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="logo-yahoo" color="primary" slot="start"></ion-icon>
+      <ion-label>Use our Yammer's services.</ion-label>
+      <ion-button (click)="goToFacebookWidgets()" fill="clear"  slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an actions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="twitterService">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="logo-twitter" slot="start" color="primary"></ion-icon>
+      <ion-label>Use our Twitter's services.</ion-label>
+      <ion-button (click)="goToTwitterWidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an actions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="mailService">
+  <ion-card>
+    <ion-item>
+      <ion-icon ios="ios-mail" md="md-mail" slot="start"></ion-icon>
+      <ion-label>Use our Mail's services.</ion-label>
+      <ion-button (click)="goToMailwidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an actions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="backHome">
+<ion-button color="danger" (click)="backToHome()">Back</ion-button>
+</div>
+</div>
+</ion-content>

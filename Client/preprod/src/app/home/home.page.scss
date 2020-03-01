@@ -1,0 +1,42 @@
+ion-content {
+    /*--background: url('https://www.few.vu.nl/~dge500/assets/assets/img/examples/bluegradient.jpg');*/
+    --background: linear-gradient(to top, #66ffcf, #7bffe2, #95fff0, #b0fffa, #ccffff);
+}
+
+    .register {
+        max-width: 100%;
+        margin-left: 80%;
+    }
+
+    .login {
+        margin-top: 15%;
+    } 
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        position: relative;
+        height: 250px;
+    }
+
+    .logo ion-icon {
+        font-size: 6em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    .connect {
+        position: relative;
+    }
+
+    .btHome {
+        display: flex;
+        justify-content: center;
+    }

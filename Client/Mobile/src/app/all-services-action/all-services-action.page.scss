@@ -1,0 +1,50 @@
+.instagramService ion-icon {
+    border-radius: 10%;
+    color: white;
+    background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.instagramService ion-button {
+    color: white;
+    background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    border-color: red;
+}
+
+.facebookService ion-button {
+    background: #405DE6;
+    color: white;
+}
+
+.twitterService ion-button {
+    background: #38A1F3;
+    color: white;
+}
+
+.githubService ion-button {
+    background: black;
+    color: white;
+}
+
+.weatherService ion-button {
+    background: #fdee00;
+    color: white;
+}
+
+.timerService ion-button {
+    background: darkgrey;
+    color: white;
+}
+
+.backHome ion-button {
+    margin: auto;
+    display: block;
+}
+
+.mailService ion-icon {
+    color: blueviolet;
+}
+
+.mailService ion-button {
+    background: blueviolet;
+    color: white;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "area_server",
+  "version": "1.0.0",
+  "description": "Node.js AREA Backend server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.2",
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0",
+    "twit": "^2.2.11"
+  }
+}

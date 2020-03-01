@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Publish Picture on Yammer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messageToPostYammer">
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Yammer</ion-card-subtitle>
+          <ion-card-title>Create a post</ion-card-title>
+        </ion-card-header>
+
+      <ion-card-content>
+        <ion-button color="primary" (click)="allRepository()">Refresh groups</ion-button>
+        <br>
+
+        <div class="allRepositories">
+          <ion-item>
+            <ion-label>All groups</ion-label>
+            <ion-select multiple="false" [(ngModel)]="choosedRepository" (ionChange)="chooseRepository()" cancelText="Cancel" okText="Choose!">
+              <ion-select-option  *ngFor="let data of repositories" value="{{ data }}">{{ data }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          </div>
+      </ion-card-content>
+      <br>
+          <ion-input type="text" [(ngModel)]="tweet" placeholder="Express yourself..." id="tweet"></ion-input>
+          <br>
+        <ion-button color="primary" (click)="chooseReaction()">Publish</ion-button>
+        <ion-button color="danger" (click)="backToYammer()">Back</ion-button>
+        <br>
+        <br>
+      </ion-card>
+  </div>
+  </ion-content>

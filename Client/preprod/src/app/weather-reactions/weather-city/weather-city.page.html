@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Weather in the city</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="seeWhatIsTheweather">
+    <form>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Weather</ion-card-subtitle>
+          <ion-card-title>What is the weather in this city ?</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-input placeholder="Ex: Los Angeles"></ion-input>
+          <br>
+        </ion-card-content>
+        <ion-button color="primary">Submit</ion-button>
+        <ion-button color="danger" (click)="backToServices()">Back</ion-button>
+        <br>
+        <br>
+      </ion-card>
+    </form>
+  
+  </div>
+  </ion-content>
+

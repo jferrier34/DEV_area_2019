@@ -1,0 +1,30 @@
+
+
+<div class="content">
+
+  <div class="githubService">
+    <div class="card" style="width: 100%; padding: 10px;">
+        <img class="card-img-top"
+        src="https://seeklogo.com/images/M/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png"
+        alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Mail.</h4>
+        <p class="card-text">Une reaction qui envoie un mail.</p>
+      </div>
+    </div>
+    <div class="card" style="width: 100%; padding: 5px;">
+      <div class="card-header">
+        Paramètres
+      </div>
+      <label for="expe">Expéditeur</label>
+      <input class="form-control" id="exp" type="text" [(ngModel)]="expediteur">
+      <label for="desti">Destinataire</label>
+      <input class="form-control" id="desti" type="text" [(ngModel)]="destinataire">
+      <label for="obj">Objet</label>
+      <input class="form-control" id="obj" type="text" [(ngModel)]="objet">
+      <label for="mail">Mail</label>
+      <textarea class="form-control" id="mail" type="text" [(ngModel)]="message"></textarea>
+    </div>
+    <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+
+  </div>

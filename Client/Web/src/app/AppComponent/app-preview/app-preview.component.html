@@ -1,0 +1,84 @@
+<div class="shadow mb-4" style="margin-left: 50px; width: 190px; padding: 20px; border-radius: 10%">
+        <img (click)="OpenApp(apps)" [src]="apps.logo" width="150px" height="150px" style="border-radius: 10%;" />
+        <div class="row">
+          <div class="col">
+              <p style="margin-left: 15px;font-size: large; margin-bottom: 0px; margin-top: 10px;">{{apps.nom}}</p>
+              <p style="margin-left: 15px;font-size: small; margin-bottom: 0px;">{{apps.version}}</p>
+          </div>
+          <div class="col">
+              <li class="nav nav-item dropdown no-arrow mx-1">
+                  <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-caret-down"></i>
+                  </a>
+                  <!-- Dropdown - Messages -->
+                  <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                    <h6 class="dropdown-header">
+                      Paramètres
+                    </h6>
+                      <a class="dropdown-item d-flex align-items-center" data-toggle="modal" [attr.data-target]="'#' + uniqueParam">
+                        <div class="font-weight-bold">
+                          <div class="text-truncate">Configuration</div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item d-flex align-items-center" data-toggle="modal" [attr.data-target]="'#' + uniqueDel">
+                          <div class="font-weight-bold">
+                            <div class="text-truncate">Supprimer</div>
+                          </div>
+                        </a>
+                  </div>
+
+                </li>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modals Param et Supprimer -->
+    <div class="modal fade" [id]="uniqueParam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Configuration - {{apps.nom}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <label for="titre">Nom d'application:</label>
+                  <input class="form-control" id="titre" type="text" [(ngModel)]="apps.nom">
+                  <label for="titre">Version</label>
+                  <input class="form-control" id="titre" type="text" [(ngModel)]="apps.version">
+                  <hr>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <app-image-pick></app-image-pick>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="changeData()">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Modals Param et Supprimer -->
+    <div class="modal fade" [id]="uniqueDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Suppression: {{apps.nom}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="titre">Etes vous sûr de vouloir supprimer définitivement cette application ainsi que toutes les données associés ?</label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="DeleteApp(apps)">Confirmer</button>
+          </div>
+      </div>
+  </div>
+</div>

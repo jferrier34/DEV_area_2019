@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>publish-picture-twitter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pictureToPostTwitter">
+    <form>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Twitter</ion-card-subtitle>
+          <ion-card-title>Post a picture</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <div class="joinFolder">
+            <ion-label id="profile_image" color="primary" stacked>Join here</ion-label>
+            <ion-input type="file" accept="image/*" id="upload" (ionChange)="imageFilePath_change($event)"></ion-input>
+          </div>
+        </ion-card-content>
+        <ion-button color="primary">Publish</ion-button>
+        <ion-button color="danger" (click)="backToTwitter2()">Back</ion-button>
+        <br>
+        <br>
+      </ion-card>
+    </form>
+  
+  </div>
+  </ion-content>

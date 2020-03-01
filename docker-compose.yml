@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  client_web:
+    build:
+      context: ./Client/Web
+      dockerfile: Dockerfile
+    volumes:
+      - './Client/Web:/app'
+      - '/app/node_modules'
+      - 'common-volume:/common'
+    ports:
+      - '8081:4200'
+    restart: on-failure
+    depends_on:
+      - client_mobile
+      - server
+
+  client_mobile:
+    build:
+      context: ./Client/Mobile
+      dockerfile: Dockerfile
+    volumes:
+      - './Client/Mobile:/app'
+      - '/app/node_modules'
+      - 'common-volume:/common'
+    restart: on-failure
+
+  server:
+    build:
+      context: ./Server
+      dockerfile: Dockerfile
+    volumes:
+      - './Server:/app'
+      - '/app/node_modules'
+    ports:
+      - '8080:3000'
+    restart: on-failure
+
+volumes:
+  common-volume:

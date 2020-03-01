@@ -1,0 +1,59 @@
+<html>
+<body>
+        <div class="container">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Inscription</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <div>
+                                <div *ngIf="w==1" class="alert alert-danger" role="alert">
+                                    Une des informations est invalide, les mots de passe correspondent t'ils ?
+                                  </div>
+                                  <div *ngIf="h==1" class="alert alert-danger" role="alert">
+                                      Ce mail est déja utilisé.
+                                    </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input [(ngModel)]="name" type="text" class="form-control" placeholder="nom complet">
+
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input [(ngModel)]="mail" type="email" class="form-control" placeholder="email">
+
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input [(ngModel)]="pass" type="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input [(ngModel)]="passc" type="password" class="form-control" placeholder="Confirm">
+                                </div>
+                                <div class="form-group">
+                                    <button (click)="onSubmit()" value="Register" class="btn float-right login_btn">Register</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center links">
+                                Vous avez un compte ? <a href="login">Connexion</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>

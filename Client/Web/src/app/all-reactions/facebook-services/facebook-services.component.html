@@ -1,0 +1,29 @@
+<div class="content">
+
+    <div class="githubService">
+      <div class="card" style="width: 100%; padding: 10px;">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Yammer_logo.png" alt="Card image cap">
+        <div class="connectAllFacebookService">
+          <a *ngIf="connect == 0" href="{{YamUrl}}" target="_blank" class="btn btn-primary">Connexion Yammer</a>
+          <button *ngIf="connect == 1" (click)="disconnect()" class="btn btn-primary">Déconnexion Yammer</button>
+        </div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Yammer services.</h4>
+          <p class="card-text">Cette réaction se déclenche sur Yammer.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 100%; padding: 5px;">
+        <div class="card-header">
+          Paramètres
+        </div>
+        <label for="club-select">Nom de groupe Yammer</label>
+        <select [disabled]="!connect" [(ngModel)]="select" class="form-control" id="club-select">
+            <option *ngFor="let item of groupe" value="{{item.id}}">{{item.nom}}</option>
+          </select>
+          <label for="mail">Message</label>
+          <textarea [disabled]="!connect" class="form-control" id="mail" type="text" [(ngModel)]="message"></textarea>
+      </div>
+      <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+  
+  </div>

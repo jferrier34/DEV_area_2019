@@ -1,0 +1,42 @@
+<button data-toggle="modal" [attr.data-target]="'#' + uniqueReact" type="button"
+  class="btn btn-rounded waves-effect"><i class="fas fa-cogs pr-2" aria-hidden="true"></i>THAT</button>
+
+<div class="modal fade" [id]="uniqueReact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter Reaction</h5>
+        <button #close type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-3 ActionList">
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 1">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Yammer_logo.png" />
+              <p>Yammer</p>
+            </button>
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 2">
+              <img src="https://www.emarketinglicious.fr/wp-content/uploads/2012/06/logo-twitter1.png" />
+              <p>Twitter</p>
+            </button>
+          </div>
+          <div class="col-md-3 ActionList">
+            <button class="btn btn-light" style="margin: 5px;" (click)="select = 3">
+              <img src="https://seeklogo.com/images/M/mail-post-symbol-logo-C7C3A0C8BD-seeklogo.com.png" />
+              <p>Mail</p>
+            </button>
+          </div>
+          <div class="col-md-6">
+            <div *ngIf="select == 1"><app-facebook-services (Valid)="valid($event)"></app-facebook-services></div>
+            <div *ngIf="select == 2"><app-twitter-services (Valid)="valid($event)"></app-twitter-services></div>
+            <div *ngIf="select == 3"><app-instagram-services (Valid)="valid($event)"></app-instagram-services></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

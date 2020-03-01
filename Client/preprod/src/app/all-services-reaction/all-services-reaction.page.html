@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All services reaction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="allServices">
+<div class="githubService">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="logo-github" slot="start" color="dark"></ion-icon>
+      <ion-label>Use our Github's services.</ion-label>
+      <ion-button (click)="goToGithubWidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an reactions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="weatherService">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="partly-sunny" slot="start" color="warning"></ion-icon>
+      <ion-label>Use our Weather's services.</ion-label>
+      <ion-button (click)="goToWeatherWidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an reactions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="currencyService">
+  <ion-card>
+    <ion-item>
+      <ion-icon ios="ios-cash" md="md-cash" slot="start"></ion-icon>
+      <ion-label>Use our Currencie's services.</ion-label>
+      <ion-button (click)="goToCurrencieswidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an reactions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="TimerService">
+  <ion-card>
+    <ion-item>
+      <ion-icon ios="ios-cash" md="md-cash" slot="start"></ion-icon>
+      <ion-label>Use our Currencie's services.</ion-label>
+      <ion-button (click)="goToTimerWidgets()" fill="clear" slot="end">More details</ion-button>
+    </ion-item>
+    <ion-card-content>
+      This section is reserved and constraints by an reactions services.
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="backHome">
+  <ion-button color="danger" (click)="backToHome()">Back</ion-button>
+  </div>
+</div>
+</ion-content>

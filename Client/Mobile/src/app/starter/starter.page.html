@@ -1,0 +1,38 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="ion-padding">
+<div class="starterPage">
+  <div class="topLeft">
+    <h3>IF</h3>
+  </div>
+  <div class="topRight">
+    <ion-button (click)="allServicesReaction()">
+      <ion-icon slot="end" round name="add-circle"></ion-icon>
+      This
+    </ion-button>
+  </div>
+</div>
+<div class="starterPage2">
+  <div class="bottomLeft">
+    <h3>THEN</h3>
+  </div>
+  <div class="bottomRight">
+    <ion-button [disabled]="disableReactionButton" (click)="allServicesAction()">
+      <ion-icon slot="end" round name="add-circle"></ion-icon>
+      That
+    </ion-button>
+  </div>
+</div>
+
+<div class="pushActionReaction">
+  <ion-button (click)="pushActionReaction()">
+    Validate
+  </ion-button>
+</div>
+
+
+
+
+</ion-content>
+

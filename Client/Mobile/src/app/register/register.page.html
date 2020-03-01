@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Email</ion-label>
+      <ion-input color="grey" placeholder="Adresse mail" [(ngModel)]="mail" type="email" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Password</ion-label>
+      <ion-input color="grey" placeholder="Password" [(ngModel)]="password" type="password" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Confirm your password</ion-label>
+      <ion-input color="grey" placeholder="Confirm your password" [(ngModel)]="password" type="password" value=""></ion-input>
+    </ion-item>
+    <br>
+    <div class="connect">
+    <div class="btRegister">
+      <ion-button round block outline color="success" (click)="register()">M'inscrire</ion-button>
+      <br>
+      <ion-button round block outline color="medium" (click)="backToLogin()">Back</ion-button>
+    </div>
+  </div>
+    <div class="flex_box">
+      <ion-item line="none">
+        <ion-label color="primary" text-center>Or continue you with</ion-label>
+      </ion-item>
+    </div>
+    <div class="flex">
+      <ion-button color="primary" shape="round">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+      <ion-button color="danger" shape="round">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

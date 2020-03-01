@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Timer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="timerServices">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="ios-timer" color="primary" slot="start"></ion-icon>
+        <ion-button (click)="connectToFacebook()" fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>      
+      <ion-card-subtitle>Action of Timer's Service</ion-card-subtitle>
+      <ion-card-title>TIMER</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+  <ion-card>
+    <div class="timerStart">
+    <ion-item>
+    <button (click)="beginTheStarter()" item-right clear>
+      <ion-icon name="create" slot="start"></ion-icon>
+    </button>
+      <ion-label>Publish an statut on your account.</ion-label>
+    </ion-item>
+    </div>
+  </ion-card>
+  
+  <div class="back">
+  <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
+</div>
+
+
+  
+</ion-content>
+

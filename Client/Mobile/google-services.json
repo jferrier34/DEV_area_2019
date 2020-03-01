@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "124389166043",
+    "firebase_url": "https://area-epitech-6886e.firebaseio.com",
+    "project_id": "area-epitech-6886e",
+    "storage_bucket": "area-epitech-6886e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124389166043:android:0852270a55f57b39b875fe",
+        "android_client_info": {
+          "package_name": "com.limitrend.area"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124389166043-e5drjug6831n1obchd98j19gfpkf33l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs-0pVrzO8JnKUbhypSgEzah5WBtSYM_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124389166043-e5drjug6831n1obchd98j19gfpkf33l9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "124389166043-a39qd6rf53otkir8kf8ju93uiuhap6t5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.epitech.arealimitrend"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

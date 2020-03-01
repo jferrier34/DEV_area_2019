@@ -1,0 +1,7 @@
+{
+  "name": "Area",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

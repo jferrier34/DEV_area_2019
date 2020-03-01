@@ -1,0 +1,21 @@
+.connectAllTwitterService button {
+    margin-top: -4rem;
+    float: right;
+    margin-right: 2rem;
+}
+
+.hr hr {
+    width: 450px;
+    float: right;
+    margin-right: 0.5rem;
+}
+
+.card {
+    margin-top: 3rem;
+}
+
+.instagramService img {
+    width: 96px;
+    height: 96px;
+    margin-left: 0.5em;
+}

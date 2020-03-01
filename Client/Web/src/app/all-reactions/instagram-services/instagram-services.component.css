@@ -1,0 +1,35 @@
+.connectAllFacebookService button {
+    margin-top: -4rem;
+    float: right;
+    margin-right: 2rem;
+}
+
+.hr hr {
+    width: 450px;
+    float: right;
+    margin-right: 0.5rem;
+}
+
+.card {
+    margin-top: 3rem;
+}
+
+.githubService img {
+    width: 96px;
+    height: 100px;
+    margin-left: 0.5em;
+}
+
+.instagramService img {
+    width: 46px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+
+.twitterService img {
+    width: 56px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}

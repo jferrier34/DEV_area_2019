@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All reactions of Twitter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="mailServices">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon ios="ios-mail" md="md-mail" slot="start"></ion-icon>
+        <ion-button (click)="connectToMailAdress()" fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>      
+      <ion-card-subtitle>Reaction of Mail's Service</ion-card-subtitle>
+      <ion-card-title>MAIL</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+  <ion-card>
+  <div class="publishPicture">
+    <ion-item>
+      <button item-right clear (click)="sendEmail()">
+        <ion-icon name="mail-open"></ion-icon>
+      </button>
+      <ion-label>Connect you on your personnal email adress.</ion-label>
+    </ion-item>
+  </div>
+  </ion-card>
+  <div class="backTwitter">
+    <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
+  </div>
+
+  
+</ion-content>

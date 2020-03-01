@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Publish Picture on Twitter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messageToPostFacebook">
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Twitter</ion-card-subtitle>
+          <ion-card-title>Create a post</ion-card-title>
+        </ion-card-header>
+          <ion-input type="text" [(ngModel)]="tweet" placeholder="Express yourself..." id="tweet"></ion-input>
+          <br>
+        <ion-button color="primary" (click)="chooseReaction()">Publish</ion-button>
+        <ion-button color="danger" (click)="backToTwitter()">Back</ion-button>
+        <br>
+        <br>
+      </ion-card>
+  </div>
+  </ion-content>
+  

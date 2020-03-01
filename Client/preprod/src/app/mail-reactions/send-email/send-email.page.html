@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Send an email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="messageToPostFacebook">
+  <form>
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Email</ion-card-subtitle>
+        <ion-card-title>Send an email</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-input placeholder="ex: julien.ferrier@epitech.eu">From:</ion-input>
+        <ion-input placeholder="ex: guillaume.lenoir@epitech.eu">To:</ion-input>
+        <ion-input placeholder="ex: Area issues">Object:</ion-input>
+        <br>
+        <ion-input placeholder="Write something...">Message:</ion-input>
+      </ion-card-content>
+      <ion-button color="primary">Send</ion-button>
+      <ion-button color="danger" (click)="backToFacebook()">Cancel</ion-button>
+      <br>
+      <br>
+    </ion-card>
+  </form>
+</div>
+</ion-content>

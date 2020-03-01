@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All reactions of Github</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="githubServices">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="logo-github" color="dark" slot="start"></ion-icon>
+        <ion-button (click)="loginGithub()" fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>
+      <ion-card-subtitle>Reaction of Github's Service</ion-card-subtitle>
+      <ion-card-title>GITHUB</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+
+  <ion-card>
+    <div class="publishPost">
+    <ion-item>
+    <button item-right clear (click)="doCommitGithub()">
+      <ion-icon name="create" slot="start"></ion-icon>
+    </button>
+    <ion-label>Make a commit</ion-label>
+    </ion-item>
+  </div>
+  </ion-card>
+  <div class="backFacebook">
+    <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
+  </div>
+
+
+</ion-content>

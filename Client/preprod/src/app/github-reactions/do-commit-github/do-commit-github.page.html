@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Make a commit on repository</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="messageToPostFacebook">
+  <form>
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Github</ion-card-subtitle>
+        <ion-card-title>Name of repository</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-button color="primary" (click)="allRepository()">Refresh repositories</ion-button>
+        <br>
+        <div class="allRepositories">
+          <ion-item>
+            <ion-label>Repositories</ion-label>
+            <ion-select multiple="false" [(ngModel)]="qty" cancelText="Cancel" okText="Lourd!">
+              <ion-select-option  *ngFor="let data of repositories" value="{{ data }}">{{ data }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          </div>
+      </ion-card-content>
+      <ion-button color="primary" (click)="chooseReactions()">Choose reaction</ion-button>
+      <ion-button color="danger" (click)="backToFacebook()">Back</ion-button>
+      <br>
+      <br>
+    </ion-card>
+  </form>
+</div>
+</ion-content>

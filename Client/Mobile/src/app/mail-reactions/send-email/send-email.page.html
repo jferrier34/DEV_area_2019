@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Send an email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="messageToPostFacebook">
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Email</ion-card-subtitle>
+        <ion-card-title>Send an email</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input placeholder="ex: julien.ferrier@epitech.eu" [(ngModel)]="expediteur">From:</ion-input>
+        <ion-input placeholder="ex: guillaume.lenoir@epitech.eu" [(ngModel)]="destinataire">To:</ion-input>
+        <ion-input placeholder="ex: Area new cool features" [(ngModel)]="objet">Object:</ion-input>
+        <br>
+        <ion-input placeholder="Write something..." [(ngModel)]="message">Message:</ion-input>
+      </ion-card-content>
+      <ion-button color="primary" (click)="valid()">Send</ion-button>
+      <ion-button color="danger" (click)="backToFacebook()">Cancel</ion-button>
+      <br>
+      <br>
+    </ion-card>
+</div>
+</ion-content>

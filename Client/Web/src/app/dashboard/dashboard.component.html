@@ -1,0 +1,69 @@
+<!-- Main Content -->
+<div id="content">
+
+  <!-- Topbar -->
+  <app-menu></app-menu>
+
+
+  <!-- BEGIN CODE VIEW-->
+  <div class="card">
+    <div class="starterPage">
+      <div class="topLeft">
+        <h3>IF</h3>
+        <h5 *ngIf="actreact != null && actreact.action != null">{{actreact.action.name}}</h5>
+      </div>
+
+      <div class="topRight">
+        <app-all-actions (Valid)="validAct($event)"></app-all-actions>
+      </div>
+    </div>
+
+    <div class="starterPage2">
+      <div class="bottomLeft">
+        <h3>THEN</h3>
+        <h5 *ngIf="actreact != null && actreact.reaction != null">{{actreact.reaction.name}}</h5>
+      </div>
+
+      <div class="bottomRight">
+        <app-all-reactions (Valid)="validReact($event)"></app-all-reactions>
+      </div>
+    </div>
+    <div style="width: 90%; text-align: right; padding-top: 20px; margin-right: 10%; margin-bottom: 30px;">
+      <button [disabled]="!(actreact.action != null && actreact.reaction != null)" type="button" (click)="addAct()"
+        class="btn btn-primary">Ajouter action</button>
+      <button [disabled]="!(actreact.action != null || actreact.reaction != null)" type="button" (click)="delAct()"
+        class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+  <!-- BEGIN TABLE-->
+  <div class="card shadow mb-4" style="margin-left: 10%; margin-right: 10%; margin-top: 30px;">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Mes actions-réactions</h6>
+    </div>
+    <div class="card-body">
+      <table class="table mTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Action</th>
+            <th scope="col">Reaction</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody *ngIf="nuser && nuser.actReact">
+          <tr *ngFor="let item of nuser.actReact; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{item.action.name}}</td>
+            <td>{{item.reaction.name}}</td>
+            <td>
+              <app-act-react-view (delete)="suppr(i, item)" [item]="item"></app-act-react-view>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+</div>

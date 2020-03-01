@@ -1,0 +1,24 @@
+.card {
+    margin-top: 3rem;
+}
+
+.facebookService img {
+    width: 46px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+
+.instagramService img {
+    width: 46px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+
+.twitterService img {
+    width: 56px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}

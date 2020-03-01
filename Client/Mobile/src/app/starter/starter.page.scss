@@ -1,0 +1,99 @@
+    .starterPage {
+        display: flex;
+    }
+
+    .starterPage2 {
+        display: flex;
+    }
+
+
+    .topLeft {
+        width: 45vw;
+        height: 45vw;
+        border:solid 2px silver;
+        margin:10px auto;
+        display: block;
+        background-image: linear-gradient(to top left, #45ffc4, #4577ff);
+        text-align: center;
+        border-radius: 7%;
+        border-style: none;
+        box-shadow: 0 35px 60px -15px rgba(0, 0, 0, .3);
+    }
+
+    .topRight {
+        width: 45vw;
+        height: 45vw;
+        border:solid 2px silver;
+        margin:10px auto;
+        display: block;
+        text-align: center;
+        border-radius: 10%;
+        background-image: linear-gradient(to bottom left, #fd746c, #ff9068);
+        border-style: none;
+        box-shadow: 0 35px 60px -15px rgba(0, 0, 0, .3);
+    }
+
+    .topRight h3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43%;
+        color: grey;
+    }
+
+    .topLeft h3 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43%;
+        color: white;
+    }
+
+    .topRight ion-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43%;
+    }
+
+    .bottomRight ion-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43%;
+    }
+
+
+
+    .bottomLeft {
+        width: 45vw;
+        height: 45vw;
+        border:solid 2px silver;
+        margin:10px auto;
+        display: inline-block;
+        text-align: center;
+        background-image: linear-gradient(to bottom left, #45ffc4, #4577ff);
+        border-radius: 10%;
+        border-style: none;
+        box-shadow: 0 35px 60px -15px rgba(0, 0, 0, .3);
+    }
+
+    .bottomLeft h3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 43%;
+        color: white;
+    }
+    
+
+    .bottomRight {
+        width: 45vw;
+        height: 45vw;
+        border:solid 2px silver;
+        margin:10px auto;
+        display: inline-block;
+        text-align: center;
+        border-radius: 10%;
+        background-image: linear-gradient(to top left, #fd746c, #ff9068);
+        border-style: none;
+        box-shadow: 0 35px 60px -15px rgba(0, 0, 0, .3);
+
+    }
