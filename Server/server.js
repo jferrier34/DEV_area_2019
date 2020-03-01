@@ -444,14 +444,14 @@ function execServiceReaction(reaction, info) {
   }
 }
 
-https.createServer({
-  key: fs.readFileSync('/ssl/privkey.pem'),
-  cert: fs.readFileSync('/ssl/fullchain.pem')
-}, server).listen(3000, function () {
-  console.log('Area server listening on port 3000!')
-});
-
-// HTTP VERSION FOR DEV
-// server.listen(3000, function () {
+// https.createServer({
+//   key: fs.readFileSync('/ssl/privkey.pem'),
+//   cert: fs.readFileSync('/ssl/fullchain.pem')
+// }, server).listen(3000, function () {
 //   console.log('Area server listening on port 3000!')
 // });
+
+// HTTP VERSION FOR DEV
+server.listen(3000, function () {
+  console.log('Area server listening on port 3000!')
+});

@@ -9,8 +9,6 @@ services:
     volumes:
       - './Client/Web:/app'
       - '/app/node_modules'
-      - '/etc/letsencrypt/live/devhugo.com/fullchain.pem:/ssl/fullchain.pem'
-      - '/etc/letsencrypt/live/devhugo.com/privkey.pem:/ssl/privkey.pem'
       - 'common-volume:/common'
     ports:
       - '8081:4200'
@@ -35,8 +33,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - './Server:/app'
-      - '/etc/letsencrypt/live/devhugo.com/fullchain.pem:/ssl/fullchain.pem'
-      - '/etc/letsencrypt/live/devhugo.com/privkey.pem:/ssl/privkey.pem'
       - '/app/node_modules'
     ports:
       - '8080:3000'
