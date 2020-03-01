@@ -19,6 +19,10 @@ export class WeatherReactionsPage implements OnInit {
     this.root.navigate(['weather-city'])
   }
 
+  whichCity2() {
+    this.root.navigate(['weather-city2'])
+  }
+
   goToAllServices() {
     this.root.navigate(['all-services-reaction'])
   }

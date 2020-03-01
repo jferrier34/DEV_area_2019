@@ -10,27 +10,39 @@
     <ion-card-header>
       <ion-item>
         <ion-icon ios="ios-cash" md="md-cash" slot="start"></ion-icon>
-        <ion-button (click)="connectToWeather()" fill="clear" slot="end">Use all reactions</ion-button>
-      </ion-item>      
+        <ion-button fill="clear" slot="end">Use all reactions</ion-button>
+      </ion-item>
       <ion-card-subtitle>Reaction of Currency's Service</ion-card-subtitle>
       <ion-card-title>CURRENCY</ion-card-title>
     </ion-card-header>
   </ion-card>
 </div>
-  
+
   <ion-card>
-    <div class="publishWeather">
+    <div class="underCurrencies">
+    <ion-item>
+    <button item-right clear (click)="seeFluctuation2()">
+      <ion-icon name="create" slot="start"></ion-icon>
+    </button>
+      <ion-label>
+        Currency - The current value drops <b>over</b> the specified value.</ion-label>
+    </ion-item>
+  </div>
+
+  <div class="bellowCurrencies">
     <ion-item>
     <button item-right clear (click)="seeFluctuation()">
       <ion-icon name="create" slot="start"></ion-icon>
     </button>
-      <ion-label>See fluctuation of Dollar</ion-label>
+      <ion-label>
+        Currency - The current value drops <b>bellow</b> the specified value.</ion-label>
     </ion-item>
   </div>
+
   </ion-card>
   <div class="backInstagram">
     <ion-button (click)="goToAllServices()" color="danger">Back</ion-button>
   </div>
 
-  
+
 </ion-content>

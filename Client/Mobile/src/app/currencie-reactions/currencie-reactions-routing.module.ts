@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'fluctuation-dollar',
     loadChildren: () => import('./fluctuation-dollar/fluctuation-dollar.module').then( m => m.FluctuationDollarPageModule)
+  },
+  {
+    path: 'fluctuation-dollar2',
+    loadChildren: () => import('./fluctuation-dollar2/fluctuation-dollar2.module').then( m => m.FluctuationDollar2PageModule)
   }
 ];
 

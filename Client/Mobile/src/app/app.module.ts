@@ -22,9 +22,9 @@ import { TwitterReactionsPageModule } from './twitter-reactions/twitter-reaction
 import { GithubReactionsPageModule } from './github-reactions/github-reactions.module';
 import { WeatherReactionsPageModule } from './weather-reactions/weather-reactions.module';
 import { PublishPostTwitterPageModule } from './twitter-reactions/publish-post-twitter/publish-post-twitter.module';
-import { PublishPictureTwitterPageModule } from './twitter-reactions/publish-picture-twitter/publish-picture-twitter.module';
 import { DoCommitGithubPageRoutingModule } from './github-reactions/do-commit-github/do-commit-github-routing.module';
 import { WeatherCityPageModule } from './weather-reactions/weather-city/weather-city.module';
+import { WeatherCity2PageModule } from './weather-reactions/weather-city2/weather-city2.module';
 import { CurrencieReactionsPageModule } from './currencie-reactions/currencie-reactions.module';
 import { MailReactionsPageModule } from './mail-reactions/mail-reactions.module';
 import { FluctuationDollarPageModule } from './currencie-reactions/fluctuation-dollar/fluctuation-dollar.module';
@@ -34,9 +34,9 @@ import { DataService } from './data.service';
 import { GithubManager } from './github-reactions/githubManager';
 import { TwitterManager } from './twitter-reactions/twitterManager'
 import { GithubReactionsPage } from './github-reactions/github-reactions.page';
-import { CurrencieManager } from './currencie-reactions/currencieManager'
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { StateService } from './starter/state.service';
+import { FluctuationDollar2PageModule } from './currencie-reactions/fluctuation-dollar2/fluctuation-dollar2.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -59,12 +59,13 @@ import { StateService } from './starter/state.service';
       { path: 'github-reactions', component: GithubReactionsPageModule },
       { path: 'weather-reactions', component: WeatherReactionsPageModule },
       { path: 'publish-post-twitter', component: PublishPostTwitterPageModule },
-      { path: 'publish-picture-twitter', component: PublishPictureTwitterPageModule },
       { path: 'do-commit-github', component: DoCommitGithubPageRoutingModule },
       { path: 'weather-city', component: WeatherCityPageModule },
+      { path: 'weather-city2', component: WeatherCity2PageModule },
       { path: 'currencie-reactions', component: CurrencieReactionsPageModule },
       { path: 'mail-reactions', component: MailReactionsPageModule },
       { path: 'fluctuation-dollar', component: FluctuationDollarPageModule },
+      { path: 'fluctuation-dollar2', component: FluctuationDollar2PageModule },
       { path: 'send-email', component: SendEmailPageModule },
     ])
   ],
@@ -77,7 +78,6 @@ import { StateService } from './starter/state.service';
     GithubManager,
     TwitterManager,
     GithubReactionsPage,
-    CurrencieManager,
     AngularFireModule,
     FluctuationDollarPageModule,
     StateService,

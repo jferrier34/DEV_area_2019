@@ -2,7 +2,6 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { GithubManager } from '../github-reactions/githubManager';
 import { TwitterManager } from '../twitter-reactions/twitterManager';
-import { CurrencieManager } from '../currencie-reactions/currencieManager';
 import { DbManageService } from '../dbManage.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { StateService } from './state.service'
@@ -24,7 +23,6 @@ export class StarterPage implements OnInit {
     public DBManage: DbManageService,
     public githubManager: GithubManager,
     public twitterManager: TwitterManager,
-    public currencieManager: CurrencieManager,
     private stateService: StateService,
     private route: ActivatedRoute,
     private router: Router,

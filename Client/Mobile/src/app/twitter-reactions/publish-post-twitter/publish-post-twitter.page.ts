@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TwitterManager } from '../twitterManager'
+import { NavController, ToastController } from '@ionic/angular';
+import { TwitterManager } from '../twitterManager';
+import { StateService } from '../../starter/state.service';
 
 
 @Component({
@@ -10,30 +12,35 @@ import { TwitterManager } from '../twitterManager'
 })
 export class PublishPostTwitterPage implements OnInit {
 
+  private tweet: string
+
+
   constructor(
     public root: Router,
-    public twitterManager: TwitterManager
-  ) { 
+    private toastController: ToastController,
+    private stateService: StateService,
+    public twitterManager: TwitterManager,
+  ) {
+    this.tweet = ''
   }
-
-  public tweet
- 
-  twitterParams = {
-    serviceName: '',
-    widgetName: '',
-    messageToTweet: this.tweet,
-}
 
   ngOnInit() {
   }
 
-  chooseReaction() {
-    this.root.navigate(['starter'])
-    console.log("MSG", this.tweet)
-    this.twitterParams = this.twitterManager.doPostTwitter(this.tweet)
-    console.log("EXPRESS", this.twitterParams);
+  async chooseReaction() {
+    if (this.tweet != '') {
+      this.twitterManager.ReactionTwitter.param[0].value = this.tweet
+      this.stateService.chooseReaction(this.twitterManager.ReactionTwitter);
+      this.root.navigate(['starter']);
+    }
+    else {
+      const toast = await this.toastController.create({
+        message: "Please enter a content of the tweet",
+        duration: 2000
+      });
+      toast.present();
+    }
   }
-
 
   backToTwitter() {
     this.root.navigate(['twitter-reactions'])

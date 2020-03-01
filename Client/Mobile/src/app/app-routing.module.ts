@@ -37,6 +37,10 @@ const routes: Routes = [
     loadChildren: () => import('./currencie-reactions/fluctuation-dollar/fluctuation-dollar.module').then( m => m.FluctuationDollarPageModule)
   },
   {
+    path: 'fluctuation-dollar2',
+    loadChildren: () => import('./currencie-reactions/fluctuation-dollar2/fluctuation-dollar2.module').then( m => m.FluctuationDollar2PageModule)
+  },
+  {
     path: 'send-email',
     loadChildren: () => import('./mail-reactions/send-email/send-email.module').then( m => m.SendEmailPageModule)
   },
@@ -53,10 +57,6 @@ const routes: Routes = [
     loadChildren: () => import('./twitter-reactions/publish-post-twitter/publish-post-twitter.module').then( m => m.PublishPostTwitterPageModule)
   },
   {
-    path: 'publish-picture-twitter',
-    loadChildren: () => import('./twitter-reactions/publish-picture-twitter/publish-picture-twitter.module').then( m => m.PublishPictureTwitterPageModule)
-  },
-  {
     path: 'all-services-reaction',
     loadChildren: () => import('./all-services-reaction/all-services-reaction.module').then( m => m.AllServicesReactionPageModule)
   },
@@ -67,6 +67,10 @@ const routes: Routes = [
   {
     path: 'weather-city',
     loadChildren: () => import('./weather-reactions/weather-city/weather-city.module').then( m => m.WeatherCityPageModule)
+  },
+  {
+    path: 'weather-city2',
+    loadChildren: () => import('./weather-reactions/weather-city2/weather-city2.module').then( m => m.WeatherCity2PageModule)
   },
   {
     path: 'currencie-reactions',

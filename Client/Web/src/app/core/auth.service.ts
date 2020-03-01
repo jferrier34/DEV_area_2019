@@ -53,6 +53,16 @@ export class AuthService {
     return this.getCookie("yammertocken");
   }
 
+  public getTwitterToken()
+  {
+    return this.getCookie("twittertocken");
+  }
+
+  public getTwitterSecret()
+  {
+    return this.getCookie("twittersecret");
+  }
+
   public getYammerNetId()
   {
     return this.getCookie("yammernetid");

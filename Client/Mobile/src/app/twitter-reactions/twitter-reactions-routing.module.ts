@@ -12,10 +12,6 @@ const routes: Routes = [
     path: 'publish-post-twitter',
     loadChildren: () => import('./publish-post-twitter/publish-post-twitter.module').then( m => m.PublishPostTwitterPageModule)
   },
-  {
-    path: 'publish-picture-twitter',
-    loadChildren: () => import('./publish-picture-twitter/publish-picture-twitter.module').then( m => m.PublishPictureTwitterPageModule)
-  }
 ];
 
 @NgModule({

@@ -19,6 +19,10 @@ export class CurrencieReactionsPage implements OnInit {
     this.root.navigate(['fluctuation-dollar'])
   }
 
+  seeFluctuation2() {
+    this.root.navigate(['fluctuation-dollar2'])
+  }
+
   goToAllServices() {
     this.root.navigate(['all-services-reaction'])
   }

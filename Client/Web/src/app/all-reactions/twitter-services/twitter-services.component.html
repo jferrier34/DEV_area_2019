@@ -4,7 +4,8 @@
     <div class="card" style="width: 100%; padding: 10px;">
       <img class="card-img-top" src="https://www.emarketinglicious.fr/wp-content/uploads/2012/06/logo-twitter1.png"
         alt="Card image cap">
-        <button class="btn btn-primary" (click)="TwitterAuth()">Connect to Twitter</button>
+        <button *ngIf="!loggedIn" class="btn btn-primary" (click)="TwitterAuth()">Connexion à Twitter</button>
+        <button *ngIf="loggedIn" class="btn btn-primary" (click)="TwitterUnAuth()">Déconnexion de Twitter</button>
       <div class="card-body">
         <h4 class="card-title">Twitter.</h4>
         <p class="card-text">Une reaction qui poste un tweet.</p>
@@ -15,7 +16,7 @@
         Paramètre
       </div>
       <label for="mail">Message</label>
-      <textarea class="form-control" id="mail" type="text" [(ngModel)]="message"></textarea>
+      <textarea [disabled]="!loggedIn" class="form-control" id="mail" type="text" [(ngModel)]="message"></textarea>
     </div>
     <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
   </div>

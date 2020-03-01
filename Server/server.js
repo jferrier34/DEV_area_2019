@@ -19,7 +19,7 @@ admin.initializeApp({
 var db = admin.database();
 
 server.get('/', cors(), function (req, res) {
-  res.send('OK')
+  res.send('Welcome to AREA project API.')
 });
 
 // Route use to get about.json who explain the different informations about this project
@@ -27,76 +27,20 @@ server.get('/', cors(), function (req, res) {
 server.get('/about.json', cors(), function (req, res) {
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   var timestamp = Math.floor(Date.now() / 1000)
+  var ref = db.ref("about")
 
   ip = ip.split(',')[0]
   ip = ip.split(':').slice(-1)
-  res.json({
-    client: { host: ip[0] },
-    server: {
-      current_time: timestamp,
-      service: [{
-        name: "GitHub",
-        actions: [{
-          name: "new-github-commit-in-repo",
-          description: "A new commit has been done in a specific repository owned by the user."
-        }],
-        reactions: [{
-        }]
-      }, {
-        name: "Twitter",
-        actions: [{
-        }],
-        reaction: [{
-          name: "twitter-post-status",
-          description: "Post a new status on the user Twitter account."
-        }, {
-          name: "twitter-post-picture",
-          description: "Post a new picture on the user Twitter account."
-        }]
-      }, {
-        name: "Yammer",
-        actions: [{
-        }],
-        reaction: [{
-          name: "yammer-post-status",
-          description: "Post a new status on All company canal."
-        }, {
-          name: "yammer-post-group-status",
-          description: "Post a new status on a specific group canal."
-        }]
-      }, {
-        name: "Currency",
-        actions: [{
-          name: "dollar-over-value",
-          description: "Dollar over a specific value."
-        }, {
-          name: "dollar-under-value",
-          description: "Dollar under a specific value."
-        }],
-        reaction: [{
-        }]
-      }, {
-        name: "Weather",
-        actions: [{
-          name: "rainy-day",
-          description: "It's raining today at Toulouse."
-        }, {
-          name: "temp-under-value",
-          description: "The temperature of today is under 15 degrees at Toulouse."
-        }],
-        reaction: [{
-        }]
-      }, {
-        name: "Mail",
-        actions: [{
-        }],
-        reaction: [{
-          name: "send-mail",
-          description: "Send an mail to a specific mail address."
-        }]
-      }]
-    }
-  })
+  ref.once("value").then(function (snapshot) {
+    var service = snapshot.val().service
+    res.json({
+      client: { host: ip[0] },
+      server: {
+        current_time: timestamp,
+      },
+      service,
+    })
+  });
 });
 
 // Cron checking each day (at 9AM) if is raining or
@@ -125,7 +69,7 @@ cron.schedule('0 9 * * *', function () {
 });
 
 function execWeatherRainReaction() {
-  var ref = db.ref("actreact");
+  var ref = db.ref("actreact")
 
   ref.once("value").then(function (snapshot) {
     snapshot.forEach(function (childSnapshot) {

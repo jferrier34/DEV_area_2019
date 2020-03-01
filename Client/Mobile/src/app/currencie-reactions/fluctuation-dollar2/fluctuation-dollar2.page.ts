@@ -5,13 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
 import { StateService } from '../../starter/state.service';
 
-
 @Component({
-  selector: 'app-fluctuation-dollar',
-  templateUrl: './fluctuation-dollar.page.html',
-  styleUrls: ['./fluctuation-dollar.page.scss'],
+  selector: 'app-fluctuation-dollar2',
+  templateUrl: './fluctuation-dollar2.page.html',
+  styleUrls: ['./fluctuation-dollar2.page.scss'],
 })
-export class FluctuationDollarPage implements OnInit {
+export class FluctuationDollar2Page implements OnInit {
   public first_currency: string
   public second_currency: string
   public exchange_rate: string
@@ -29,8 +28,8 @@ export class FluctuationDollarPage implements OnInit {
   ) {
     this.currencyAction = new Action
     this.currencyAction.Service = "Currency"
-    this.currencyAction.ServiceName = "dollar-under-value"
-    this.currencyAction.name = "Currency - The exchange rate between two currencies goes below a value"
+    this.currencyAction.ServiceName = "dollar-over-value"
+    this.currencyAction.name = "Currency - The exchange rate between two currencies goes over a value"
     this.currencyAction.param = Array()
     this.currencyAction.param.push({input: "first_currency", value: ""})
     this.currencyAction.param.push({input: "second_currency", value: ""})
@@ -46,7 +45,6 @@ export class FluctuationDollarPage implements OnInit {
     this.second_currency = ''
     this.exchange_rate = ''
   }
-
   ngOnInit() {}
 
   onValueChange() {
