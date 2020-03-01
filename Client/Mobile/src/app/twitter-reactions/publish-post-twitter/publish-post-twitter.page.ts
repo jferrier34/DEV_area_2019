@@ -12,7 +12,7 @@ import { StateService } from '../../starter/state.service';
 })
 export class PublishPostTwitterPage implements OnInit {
 
-  private tweet: string
+  public tweet: string
 
 
   constructor(

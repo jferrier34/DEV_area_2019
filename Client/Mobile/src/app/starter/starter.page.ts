@@ -6,6 +6,7 @@ import { DbManageService } from '../dbManage.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { StateService } from './state.service'
 import { ToastController} from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-starter',
@@ -17,7 +18,7 @@ import { ToastController} from '@ionic/angular';
 export class StarterPage implements OnInit {
   public uid: string;
   private basePath: string;
-  private disableReactionButton: boolean
+  public disableReactionButton: boolean
 
   constructor(
     public DBManage: DbManageService,
@@ -28,6 +29,7 @@ export class StarterPage implements OnInit {
     private router: Router,
     private db: AngularFireDatabase,
     public toastController: ToastController,
+    public http: HttpClient,
   ) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
@@ -58,7 +60,16 @@ export class StarterPage implements OnInit {
 
     if (this.stateService.isActionReactionChoosed()) {
       this.db.list(this.basePath).push(this.stateService.actionReaction);
-      this.db.list('/actreact').push(this.stateService.actionReaction);
+      let actionReactionReference = this.db.list('/actreact').push(this.stateService.actionReaction);
+      if (this.stateService.actionReaction.action.ServiceName === "new-github-commit-in-repo") {
+        let username = this.stateService.actionReaction.action.param[1].value;
+        let user_token = this.stateService.actionReaction.action.token;
+        let repo_name = this.stateService.actionReaction.action.param[0].value;
+        let action_id = (await actionReactionReference).key;
+        console.log(`https://devhugo.com:8080/create/GithubWebhook?owner=${username}&token=${user_token}&repo=${repo_name}&action_id=${action_id}`)
+        this.http.get(`https://devhugo.com:8080/create/GithubWebhook?owner=${username}&token=${user_token}&repo=${repo_name}&action_id=${action_id}`)
+      }
+
       this.stateService.clearActionReaction();
     }
     else {

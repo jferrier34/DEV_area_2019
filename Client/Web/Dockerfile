@@ -18,4 +18,4 @@ RUN npm install -g @angular/cli@7.3.9
 COPY . .
 
 # start app
-CMD ng serve --host 0.0.0.0 --disableHostCheck
+CMD cp /common/client.apk src/assets/client.apk && ng serve --host 0.0.0.0 --disableHostCheck --ssl=true --sslCert=/ssl/fullchain.pem --sslKey=/ssl/privkey.pem

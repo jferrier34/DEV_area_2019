@@ -4,24 +4,24 @@
     <div class="card" style="width: 100%; padding: 10px;">
       <img class="card-img-top" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Card image cap">
       <div class="connectAllFacebookService">
-        <a *ngIf="connect == 0" href="{{githubUrl}}" target="_blank" class="btn btn-primary">Connexion GitHub</a>
-        <button *ngIf="connect == 1" (click)="disconnect()" class="btn btn-primary">Deconnexion Github</button>
+        <a *ngIf="connect == 0" href="{{githubUrl}}" target="_blank" class="btn btn-primary">GitHub Connection</a>
+        <button *ngIf="connect == 1" (click)="disconnect()" class="btn btn-primary">Github Logout</button>
       </div>
       </div>
       <div class="card-body">
         <h4 class="card-title">Github services.</h4>
-        <p class="card-text">Cette action se déclenche lors d'un commit à un repo.</p>
+        <p class="card-text">This action is triggered during a repo commit.</p>
       </div>
     </div>
     <div class="card" style="width: 100%; padding: 5px;">
       <div class="card-header">
-        Paramètres
+        Parameters
       </div>
-      <label for="club-select">Nom de repository</label>
+      <label for="club-select">Name of repository</label>
       <select [disabled]="!connect" [(ngModel)]="repository" class="form-control" id="club-select">
           <option *ngFor="let item of repo" value="{{item}}">{{item}}</option>
         </select>
     </div>
-    <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+    <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Submit</button>
 
 </div>

@@ -33,5 +33,4 @@ export class WeatherCityPage implements OnInit {
   backToServices() {
     this.root.navigate(['all-services-reaction'])
   }
-
 }

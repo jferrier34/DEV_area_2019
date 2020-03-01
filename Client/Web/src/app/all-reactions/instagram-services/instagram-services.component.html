@@ -9,22 +9,22 @@
         alt="Card image cap">
       <div class="card-body">
         <h4 class="card-title">Mail.</h4>
-        <p class="card-text">Une reaction qui envoie un mail.</p>
+        <p class="card-text">A reaction that sends an email.</p>
       </div>
     </div>
     <div class="card" style="width: 100%; padding: 5px;">
       <div class="card-header">
-        Paramètres
+        Parameters
       </div>
-      <label for="expe">Expéditeur</label>
+      <label for="expe">From</label>
       <input class="form-control" id="exp" type="text" [(ngModel)]="expediteur">
-      <label for="desti">Destinataire</label>
+      <label for="desti">To</label>
       <input class="form-control" id="desti" type="text" [(ngModel)]="destinataire">
-      <label for="obj">Objet</label>
+      <label for="obj">Object</label>
       <input class="form-control" id="obj" type="text" [(ngModel)]="objet">
       <label for="mail">Mail</label>
       <textarea class="form-control" id="mail" type="text" [(ngModel)]="message"></textarea>
     </div>
-    <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+    <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Submit</button>
 
   </div>

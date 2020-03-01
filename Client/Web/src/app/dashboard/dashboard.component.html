@@ -30,7 +30,7 @@
     </div>
     <div style="width: 90%; text-align: right; padding-top: 20px; margin-right: 10%; margin-bottom: 30px;">
       <button [disabled]="!(actreact.action != null && actreact.reaction != null)" type="button" (click)="addAct()"
-        class="btn btn-primary">Ajouter action</button>
+        class="btn btn-primary">Add Action</button>
       <button [disabled]="!(actreact.action != null || actreact.reaction != null)" type="button" (click)="delAct()"
         class="btn btn-danger">Delete</button>
     </div>
@@ -38,7 +38,7 @@
   <!-- BEGIN TABLE-->
   <div class="card shadow mb-4" style="margin-left: 10%; margin-right: 10%; margin-top: 30px;">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Mes actions-réactions</h6>
+      <h6 class="m-0 font-weight-bold text-primary">My favorites Actions/Reactions</h6>
     </div>
     <div class="card-body">
       <table class="table mTable">

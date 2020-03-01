@@ -33,6 +33,7 @@ import { GithubComponent } from './auth/github/github.component';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { InstaComponent } from './auth/insta/insta.component';
 import { ActReactViewComponent } from './AppComponent/act-react-view/act-react-view.component';
+import { DlappComponent } from './core/dlapp/dlapp.component';
 
 const config = new AuthServiceConfig([
   {
@@ -65,6 +66,7 @@ export function provideConfig() {
     GithubComponent,
     InstaComponent,
     ActReactViewComponent,
+    DlappComponent,
   ],
   imports: [
     BrowserModule,

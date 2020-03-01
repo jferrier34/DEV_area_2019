@@ -14,7 +14,7 @@ import { Param } from '../../model';
 
 export class DoCommitGithubPage implements OnInit {
   public repositories: any;
-  private choosedRepository: string;
+  public choosedRepository: string;
 
   constructor(
     public root: Router,

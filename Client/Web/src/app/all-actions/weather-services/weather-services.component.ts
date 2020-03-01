@@ -17,11 +17,11 @@ export class WeatherServicesComponent implements OnInit {
   @Input() type;
   ngOnInit() {
     if (this.type == 1) {
-      this.text = "Cette action déclenche lorsque la température passe en dessous de 15 degrés";
+      this.text = "This action triggers when the temperature drops below 15 degrees";
       this.name = "temp-under-value"
     }
     else {
-      this.text = "Cette action déclenche si il pleut demain";
+      this.text = "This action triggers if it rains tomorrow";
       this.name = "rainy-day"
     }
 

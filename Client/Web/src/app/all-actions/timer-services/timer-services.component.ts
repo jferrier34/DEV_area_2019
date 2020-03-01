@@ -47,11 +47,11 @@ export class TimerServicesComponent implements OnInit {
       }
     });
     if (this.type == 1) {
-      this.text = "Devise - La valeur actuelle passe sous la valeur spécifié";
+      this.text = "Currency - Current value drops below specified value";
       this.name = "dollar-under-value"
     }
     else {
-      this.text = "Devise - La valeur actuelle au dessus de la valeur spécifié";
+      this.text = "Currency - The current value above the specified value";
       this.name = "dollar-over-value"
     }
 

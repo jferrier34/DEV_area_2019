@@ -12,4 +12,4 @@ COPY . .
 
 RUN npm install
 
-CMD ionic cordova platform add browser && ionic cordova run browser --no-native-run --address 0.0.0.0 -- --disableHostCheck true
+CMD cp apk/*.apk /common/client.apk && ionic cordova platform add browser && ionic cordova run browser --no-native-run --address 0.0.0.0 -- --disableHostCheck true

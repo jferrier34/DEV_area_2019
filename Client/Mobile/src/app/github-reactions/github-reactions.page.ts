@@ -44,6 +44,7 @@ export class GithubReactionsPage implements OnInit {
     .then(async res => {
       this.githubManager.loggedIn = true;
       this.githubManager.githubAction.token = (<any>res).credential.accessToken;
+      this.githubManager.githubAction.param[1].value = (<any>res).additionalUserInfo.username;
       const toast = await this.toastController.create({
         message: "GitHub login successful",
         duration: 2000

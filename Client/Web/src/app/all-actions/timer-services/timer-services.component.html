@@ -7,15 +7,15 @@
       </div>
     </div>
     <div class="card-body">
-      <h4 class="card-title">Action et monnaie services.</h4>
+      <h4 class="card-title">Action and currency services.</h4>
       <p class="card-text">{{text}}.</p>
     </div>
   </div>
   <div class="card" style="width: 100%; padding: 5px;">
     <div class="card-header">
-      Paramètres
+      Parameters
     </div>
-    <label for="club-select">Choisissez une paire de monnaies disponible :</label>
+    <label for="club-select">Choose a pair of available currencies:</label>
     <div class="row">
       <div class="col-md-6">
         <select (change)='onValueChange()' [(ngModel)]="curr1" class="form-control" id="club-select">
@@ -28,10 +28,10 @@
         </select>
       </div>
 
-      <p style="padding: 10px;">Valeur actuel de l'échange: {{actual}}</p>
-      <input style="margin: 10px;" placeholder="Valeur de référence ..." class="form-control" id="expe" type="text" [(ngModel)]="value">
+      <p style="padding: 10px;">Current exchange value: {{actual}}</p>
+      <input style="margin: 10px;" placeholder="reference value..." class="form-control" id="expe" type="text" [(ngModel)]="value">
     </div>
   </div>
-  <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Valider</button>
+  <button style="margin-top: 30px;" (click)="valid()" type="button" class="btn btn-primary">Submit</button>
 
 </div>

@@ -21,10 +21,13 @@ export class GithubManager {
         this.githubAction.ServiceName = "new-github-commit-in-repo"
         this.githubAction.param = new Array()
         this.githubAction.param.push({input: "repository", value: ""})
+        this.githubAction.param.push({input: "username", value: ""})
     }
 
     logWithGithub() {
-        return firebase.auth().signInWithPopup(new firebase.auth.GithubAuthProvider());
+        let githubProvider = new firebase.auth.GithubAuthProvider()
+        githubProvider.addScope('repo')
+        return firebase.auth().signInWithPopup(githubProvider);
     }
 
     refreshRepositories(callback) {
